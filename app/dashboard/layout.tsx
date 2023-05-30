@@ -4,11 +4,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section
-      style={{
-        backgroundColor: 'lightpink',
-      }}
-    >
+    <section>
       {/* Include shared UI here e.g. a header or sidebar */}
       <p>Dashboard Layout</p>
 

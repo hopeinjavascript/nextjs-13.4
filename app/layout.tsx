@@ -1,7 +1,8 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { Metadata } from 'next';
+import { Container, SSRProvider } from './../components/bootstrap';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,8 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h1>Common stuff from layout.tsx file</h1>
-        {children}
+        {/* SSRProvider this is necessary to import by react-bootstrap wherever we use SSR */}
+        <SSRProvider>
+          <Container>
+            {/* Container is a Client component so does that mean that below {children} components that will be received will also be Client comp? NooooOO! */}
+            {/* children will mostly be Server components (or can be client components) then how does this work?   */}
+            {/* because these are not directly coded into the component, they are being accepted sa children prop */}
+            {/* whenever we pass children prop React doesn't have to know in advance what the content of the page/comp is, instead it just have to reserve a slot(an empty hole so to speak) inside of the wrapper comp */}
+            {/* This is an important concept, this way we can have Client comp wrapper and still be able to use Server components in them */}
+            {children}
+          </Container>
+        </SSRProvider>
       </body>
     </html>
   );
