@@ -25,3 +25,36 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.note {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  background-color: lightcoral;
+  color: #f5f5f5;
+  width: 100%;
+}
+
+button,
+.btn {
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  color: #f5f5f5;
+  background-color: steelblue !important;
+  border-radius: 5px;
+}
