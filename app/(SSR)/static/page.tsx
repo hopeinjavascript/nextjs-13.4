@@ -30,11 +30,18 @@ export const metadata = {
 
 export default async function Page() {
   //   const URL = 'https://jsonplaceholder.typicode.com/photos/1';
-  const URL = `https://unsplash.it/500/${500 + Math.floor(Math.random() * 10)}`;
+  // const URL = `https://unsplash.it/500/${500 + Math.floor(Math.random() * 10)}`;
   //   const res = await fetch(URL);
   //   const image: TImage = await res.json();
 
-  await sleep(1);
+  let randomNum = Math.floor(Math.random() * 10);
+  randomNum = randomNum ? randomNum : 20; // check for randomNum zero, below api doesn't have resource for 0 number
+  const URL = `https://jsonplaceholder.typicode.com/photos/${1}`;
+  // const URL = `https://unsplash.it/500/${500 + Math.floor(Math.random() * 10)}`;
+  const res = await fetch(URL);
+  const image: TImage = await res.json();
+  // console.log({ randomNum });
+  // console.log(image);
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -49,10 +56,10 @@ export default async function Page() {
         and the static HTML is rendered everything the page is refreshed or even hard refreshed
          */}
       <Image
-        src={URL} // image.url
+        src={image.url}
         width={400}
         height={400}
-        alt={'pic'} // image.title
+        alt={image.title}
         className="rounded shadow mw-100 h-100"
       />
       <a href={URL}>actual image</a>
