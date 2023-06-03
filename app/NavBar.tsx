@@ -59,6 +59,9 @@ const NavBar = () => {
             >
               dynamic
             </Nav.Link>
+            <Nav.Link as={Link} href="/isr" active={pathname === '/isr'}>
+              isr
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
