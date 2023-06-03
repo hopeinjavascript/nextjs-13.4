@@ -3,6 +3,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import { Metadata } from 'next';
 import { Container, SSRProvider } from './../components/bootstrap';
+import NavBar from './NavBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* SSRProvider this is necessary to import by react-bootstrap wherever we use SSR */}
         <SSRProvider>
+          <NavBar />
           <Container>
             {/* Container is a Client component so does that mean that below {children} components that will be received will also be Client comp? NooooOO! */}
             {/* children will mostly be Server components (or can be client components) then how does this work?   */}
