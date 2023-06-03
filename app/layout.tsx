@@ -23,7 +23,7 @@ export default function RootLayout({
         {/* SSRProvider this is necessary to import by react-bootstrap wherever we use SSR */}
         <SSRProvider>
           <NavBar />
-          <Container>
+          <Container className="py-4">
             {/* Container is a Client component so does that mean that below {children} components that will be received will also be Client comp? NooooOO! */}
             {/* children will mostly be Server components (or can be client components) then how does this work?   */}
             {/* because these are not directly coded into the component, they are being accepted sa children prop */}

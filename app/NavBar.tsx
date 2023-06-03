@@ -49,6 +49,9 @@ const NavBar = () => {
             >
               dashboard
             </Nav.Link>
+            <Nav.Link as={Link} href="/static" active={pathname === '/static'}>
+              static
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

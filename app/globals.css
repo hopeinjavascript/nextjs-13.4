@@ -58,3 +58,8 @@ button,
   background-color: steelblue !important;
   border-radius: 5px;
 }
+
+img {
+  /* just as a placeholder  */
+  background-color: lightseagreen;
+}
