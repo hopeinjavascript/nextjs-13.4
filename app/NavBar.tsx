@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import Link from 'next/link';
 
 /*
@@ -62,6 +62,17 @@ const NavBar = () => {
             <Nav.Link as={Link} href="/isr" active={pathname === '/isr'}>
               isr
             </Nav.Link>
+            <NavDropdown title="albums" id="albums-dropdown">
+              <NavDropdown.Item as={Link} href="/albums/1">
+                Album Id 1
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/albums/5">
+                Album Id 5
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/albums/22">
+                Album Id 22
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
