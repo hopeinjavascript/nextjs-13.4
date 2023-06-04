@@ -73,6 +73,17 @@ const NavBar = () => {
                 Album Id 22
               </NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown title="users" id="users-dropdown">
+              <NavDropdown.Item as={Link} href="/users/1">
+                User Id 1
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/users/5">
+                User Id 5
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/users/10">
+                User Id 10
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
