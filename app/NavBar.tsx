@@ -84,6 +84,9 @@ const NavBar = () => {
                 User Id 10
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} href="/search" active={pathname === '/search'}>
+              search
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

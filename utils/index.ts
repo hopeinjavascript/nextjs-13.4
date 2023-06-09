@@ -7,8 +7,8 @@ export async function sleep(seconds: number) {
   );
 }
 
-export async function callApi(URL: string) {
-  const res = await fetch(URL);
+export async function callApi(URL: string, options = {}) {
+  const res = await fetch(URL, options);
 
   // to redirect to our custom not found page instead of showing blank result when th
   // underlying/upstream api doesn't return any result
